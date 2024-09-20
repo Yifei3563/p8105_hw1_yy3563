@@ -5,3 +5,18 @@ date: "2024-09-20"
 output: github_document
 ---
 
+### Problem 1
+
+## Load the penguins dataset.
+
+```{r}
+library(palmerpenguins)
+data("penguins", package = "palmerpenguins")
+```
+
+The `penguins` dataset includes data on `species`, `island`, `bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, `body_mass_g`, `sex`, and `year` of penguins from three different species: Adelie, Gentoo, and Chinstrap. 
+
+The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns. 
+
+The mean flipper length of the penguins is `r mean(penguins$flipper_length_mm, na.rm = TRUE )` mm.
+
