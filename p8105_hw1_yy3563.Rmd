@@ -1,0 +1,7 @@
+---
+title: "p8105_hw1_yy3563"
+author: "Yifei Yu"
+date: "2024-09-20"
+output: github_document
+---
+
