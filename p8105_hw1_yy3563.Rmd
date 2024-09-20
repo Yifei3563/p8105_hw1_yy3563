@@ -20,3 +20,21 @@ The dataset has `r nrow(penguins)` rows and `r ncol(penguins)` columns.
 
 The mean flipper length of the penguins is `r mean(penguins$flipper_length_mm, na.rm = TRUE )` mm.
 
+## Make the scatterplot and export to project directory.
+
+```{r}
+library(tidyverse)
+
+plot_penguin = tibble(
+  x = penguins$bill_length_mm,
+  y = penguins$flipper_length_mm,
+  species = penguins$species
+)
+
+ggplot(plot_penguin, aes(x = x, y = y, color = species)) + 
+  geom_point() +
+  labs(x = "bill length (mm)", y = "flipper length (mm)", color = "species")
+
+ggsave("scatter_penguin.pdf", height = 4, width = 4 )
+```
+
